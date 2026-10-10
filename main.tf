@@ -29,3 +29,13 @@ output "project_name" {
 output "environment" {
   value = terraform_data.project.output.environment
 }
+
+variable "project_version" {
+  description = "Version of the CloudOps project"
+  type        = string
+  default     = "1.0.0"
+}
+
+output "project_version" {
+  value = var.project_version
+}
